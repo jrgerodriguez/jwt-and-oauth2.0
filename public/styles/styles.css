@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  background: linear-gradient(to right, #26413c, #172a3a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Utilities */
+.margin-top {
+  margin-top: 1.5rem;
+}
+
+.contenedor {
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  width: 400px;
+}
+
+@media (max-width: 468px) {
+  .contenedor {
+    width: 90%;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 12px;
+  color: #e5e5e5;
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+input {
+  padding: 0.6rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+input::placeholder {
+  color: #cccccc;
+}
+
+input:focus {
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+input[type="submit"] {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+    transform 0.2s ease;
+}
+
+input[type="submit"]:disabled {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.5);
+  border-color: rgba(255, 255, 255, 0.2);
+  cursor: not-allowed;
+  transform: none;
+}
+
+input[type="submit"]:hover {
+  background-color: white;
+  color: #172a3a;
+  transform: scale(1.02);
+}
+
+.red {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  padding: 0.6rem;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+  color: #e5e5e5;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+    transform 0.2s ease;
+  cursor: pointer;
+}
+
+.red:hover {
+  background-color: white;
+  color: #172a3a;
+}
+
+.red-text-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  font-size: 4rem;
+  color: #b0c4b1;
+  font-family: monospace;
+  text-align: center;
+}
+
+@media (max-width: 468px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+.introduction {
+  color: #b0c4b1;
+  font-family: monospace;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.create-username {
+  margin-bottom: 0;
+}
+
+/* ESTILOS PARA EL OJO EN EL INPUT DE PASSWORD */
+
+.input-eye-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input-eye-wrapper input {
+  width: 100%;
+  padding-right: 35px;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.eye-icon:hover {
+  color: #fff;
+}
+
+.margin-top {
+  margin-top: 1.5rem;
+}
+
+/* Notificacion */
+
+.notification-container {
+  margin-bottom: 1.5rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  background-color: rgba(255, 0, 0, 0.1); /* rojo suave translúcido */
+  border: 1.5px solid rgba(255, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.notification {
+  text-align: center;
+  font-family: monospace;
+  color: #ff6b6b;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Button */
+.button {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+    transform 0.2s ease;
+  padding: 0.6rem;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: white;
+  color: #172a3a;
+}
